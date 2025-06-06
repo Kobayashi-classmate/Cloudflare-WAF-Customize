@@ -32,12 +32,12 @@ Risk IP CSV: [GO](./List-RiskIP.csv)
 ## Host name details
 
 
-| 匹配规则 | 解释 |
+| Matching rules | Explain |
 | ----------- | ----------- |
-|主机名	|  针对输入网站域名的配置 |
-|URL路径	|  针对访问链接路径中内容的匹配 |
-|国家/地区	|  针对访问IP来源地区的匹配 |
-|SSL/HTTPS	|  针对是否使用https访问的匹配 |
+| Hostname	|  Configuration for entering website domain name |
+| URL path	|  Matching against content in the access link path |
+| Country/Region	|  Matching for access IP source region |
+| SSL/HTTPS	|  Matching whether to use https access |
 
 The combination of the first three contents and the above four can flexibly define the scope. For example, host name + URL path can set higher verification requirements for specific directories and specific files (such as login pages, etc.). Take the blogger himself as an example. The directory where the blogger's static resources are located will be synchronized to the overseas origin site. With the following configuration, you can delineate access to PHP files and directories that do not match the two static files, and block them. There are many similar applications, you can think more and try~
 
