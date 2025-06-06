@@ -22,9 +22,15 @@ The third rule uses the judgment of threat scores and IP lists. The former is a 
 
 Since the number of IP lists provided is large, direct configuration exceeds the character limit of firewall rules. Therefore, you need to create a list containing high-risk IPs through [Manage Account]-[Configuration]-[List]-[Create New List] (the csv for import is below), and then directly match this list in the firewall.
 
+Primitive expression:
 ```
 (ip.src in $risk_ip) or (cf.threat_score gt 30)
 ```
+Threat score will no longer be supported as a field for rules. Cloudflare's upgraded security automatically protects your domain from malicious traffic. Read the blog [post](https://blog.cloudflare.com/enhanced-security-and-simplified-controls-with-automated-botnet-protection/) to learn more.
+```
+(ip.src in $risk_ip)
+```
+$risk_ip is your IP list name
 
 Risk IP list: [GO](./List-RiskIP.txt)
 Risk IP CSV: [GO](./List-RiskIP.csv)
